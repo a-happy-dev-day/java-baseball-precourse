@@ -15,16 +15,27 @@
    - 잘못된 입력일 경우, `IllegalArgumentException`가 발생한다.
 
 ## 🖥 모델링
-1. RandomNumberGenerator
+1. GameStater
+   - `RandomNumberGenerator`을 통해 `3개의 숫자` 추출한다.
+   - `InputNumberReceiver`을 통해 `3개의 숫자`를 받는다.
+   - `ResultJudgement` 위에서 받은 `3개의 숫자 2세트`를 주입한다.
+   - `GameQuit`에 결과를 주입하여 게임을 재시작할지 종료할지 결정한다. 
+
+2. RandomNumberGenerator
    - 행위
-     - 3개의 서로다른 숫자를 생성, 반환한다.
-2. InputNumberReceiver
+     - `camp.nextstep.edu.missionutils.Randoms`의 `pickNumberInRange()` 사용하여 Random값을 추출한다.
+     - 3개의 값이 서로다른 값인지 확인한다. 
+
+3. InputNumberReceiver
    - 행위
+     - `camp.nextstep.edu.missionutils.Console`의 `readLine()` 사용하여 입력값을 저장한다. 
      - 3개의 서로다른 숫자가 올바르게 입력되었는지 검사한다.
-3. JudgeResult
+   
+4. ResultJudgement
    - 행위
-     - RandomNumber, InputNumber를 비교한다
-4. OutputResult
+     - 스트라이크, 볼 갯수를 판단한다.
+     - 결과를 출력한다.
+
+5. GameQuit
    - 행위
-     - 3의 결과를 출력한다.
-     - 모두 맞힐 경우 다음 게임 여부를 물어본다.
+     - 2번이 입력될 경우 게임을 종료시킨다.
