@@ -1,9 +1,13 @@
 package baseball;
 
 public class Number {
-    int number;
+    private int number;
 
     public Number(int number) {
         this.number = number;
+    }
+
+    public int getNumber() {
+        return number;
     }
 }

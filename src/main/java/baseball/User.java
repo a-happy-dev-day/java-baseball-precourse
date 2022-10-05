@@ -3,13 +3,10 @@ package baseball;
 import java.util.Scanner;
 
 public class User {
-    Scanner scn = new Scanner(System.in);
-    Check check;
-    public User(){}
+    private Scanner scn = new Scanner(System.in);
+    private Check check = new Check();
 
-
-    public String restartOrExit() throws IllegalStateException{
-
+    public String restartOrExit() {
         return scn.next();
     }
 

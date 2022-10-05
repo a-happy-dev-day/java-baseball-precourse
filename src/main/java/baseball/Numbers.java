@@ -1,17 +1,16 @@
 package baseball;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Numbers {
-    private List<Number> number = new ArrayList<>();
+    private List<Number> numbers;
 
-    public Numbers(ArrayList<Number> number) {
-        this.number = number;
+    public Numbers(List<Number> numbers) {
+        this.numbers = numbers;
     }
 
     public List<Number> getNumber() {
-        return number;
+        return numbers;
     }
 
 

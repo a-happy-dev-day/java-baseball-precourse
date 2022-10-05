@@ -3,8 +3,9 @@ package baseball;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import static baseball.RandomNumberGenerator.NUMBER_SIZE;
+
 public class Check {
-    final int NUMBER_SIZE = 3;
 
     public Numbers checkNumber(String numbers) {
         String[] array = numbers.split("");
@@ -12,7 +13,6 @@ public class Check {
         checkSize(array);
         checkRedundancy(array);
         checkDigit(array);
-        checkNormalRange(array);
         for(String arr : array) {
             number.add(new Number(Integer.parseInt(arr)));
         }
@@ -38,14 +38,6 @@ public class Check {
     private void checkDigit(String[] array) {
         for(String arr : array) {
             if(!(Integer.parseInt(arr) >= 0 && Integer.parseInt(arr) <= 9)) {
-                throw new IllegalArgumentException();
-            }
-        }
-    }
-
-    private void checkNormalRange(String[] array){
-        for(String arr : array) {
-            if(!Character.isDigit(Integer.parseInt(arr))) {
                 throw new IllegalArgumentException();
             }
         }

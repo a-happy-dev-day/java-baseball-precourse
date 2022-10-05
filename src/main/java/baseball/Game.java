@@ -1,15 +1,13 @@
 package baseball;
 
 public class Game {
-    User user;
-    RandomNumberGenerator randomNumberGenerator;
-    CompareSystem compareSystem;
-    Numbers random_numbers;
-    Numbers user_numbers;
-    final String RESTART = "1";
-    final String EXIT = "2";
-
-    public Game() {}
+    private User user = new User();
+    private RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
+    private CompareSystem compareSystem = new CompareSystem();
+    private Numbers random_numbers;
+    private Numbers user_numbers;
+    static final String RESTART = "1";
+    static final String EXIT = "2";
 
     public void play() {
         boolean keepGoing = false;
@@ -20,11 +18,14 @@ public class Game {
             compareSystem.compare(user_numbers, random_numbers);
             keepGoing = compareSystem.print();
         }
-
     }
 
     public boolean checkRestartOrExit() {
         System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
-        return user.restartOrExit().equals(RESTART);
+        String checkResult = user.restartOrExit();
+        if(!(checkResult.equals(RESTART) || checkResult.equals(EXIT))) {
+            throw new IllegalArgumentException();
+        }
+        return checkResult.equals(RESTART);
     }
 }
