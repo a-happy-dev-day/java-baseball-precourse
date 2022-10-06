@@ -1,16 +1,20 @@
 package baseball;
 
 public class Number {
-    private int number;
+    private String number;
 
-    public Number(int number) {
-        if(number < 1 || number > 9) {
+    public Number(String number) {
+        if(!number.chars().allMatch(Character::isDigit)) {
+            throw new IllegalArgumentException();
+        }
+        int num = Integer.parseInt(number);
+        if(num < 1 || num > 9) {
             throw new IllegalArgumentException();
         }
         this.number = number;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 }
