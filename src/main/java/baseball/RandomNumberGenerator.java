@@ -1,8 +1,10 @@
 package baseball;
 
+import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+
 
 public class RandomNumberGenerator {
     static HashSet<Integer> hash = new HashSet<>();
@@ -12,7 +14,7 @@ public class RandomNumberGenerator {
 
     public Numbers requestRandomNumber() {
         while(hash.size() != NUMBER_SIZE) {
-            hash.add((int) Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER)) + 1);
+            hash.add(Randoms.pickNumberInRange(MIN_NUMBER, MAX_NUMBER));
         }
         List<Integer> list = new ArrayList<>(hash);
         ArrayList<Number> number = new ArrayList<>();
