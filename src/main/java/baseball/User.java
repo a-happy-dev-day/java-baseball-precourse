@@ -1,16 +1,20 @@
 package baseball;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class User {
     private Scanner scn = new Scanner(System.in);
-    private Check check = new Check();
+
 
     public String restartOrExit() {
         return scn.next();
     }
 
     public Numbers requestNumber() {
-        return check.checkNumber(scn.next());
+        List<Number> number = new ArrayList<>();
+        for(String s : scn.next().split("")) {
+            number.add(new Number(Integer.parseInt(s)));
+        }
+        return new Numbers(number);
     }
 }

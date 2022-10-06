@@ -12,7 +12,7 @@ public class Game {
     public void play() {
         boolean keepGoing = false;
         while(!keepGoing) {
-            System.out.println("서로 다른 3자리 숫자를 입력해주세요. ");
+            System.out.print("서로 다른 3자리 숫자를 입력해주세요. ");
             random_numbers = randomNumberGenerator.requestRandomNumber();
             user_numbers = user.requestNumber();
             compareSystem.compare(user_numbers, random_numbers);
