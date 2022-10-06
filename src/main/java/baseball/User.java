@@ -10,7 +10,7 @@ public class User {
         return Console.readLine();
     }
 
-    public Numbers inputNumbers() {
+    public Numbers createNumbers() {
         List<Number> number = new ArrayList<>();
         for(String s : Console.readLine().split("")) {
             number.add(new Number(s));
