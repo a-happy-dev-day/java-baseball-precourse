@@ -13,12 +13,12 @@ public class ResultJudgement {
                 continue;
             }
             for (int j = 0; j < computer.size(); j++) {
-                if(i == j) continue;
-                if(computer.get(i).equals(user.get(j))) ball++;
+                if (i == j) continue;
+                if (computer.get(i).equals(user.get(j))) ball++;
             }
         }
         System.out.println(ball + "볼" + strike + "스트라이크");
-        if(strike == 3) {
+        if (strike == 3) {
             return true;
         }
         return false;

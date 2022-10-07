@@ -1,7 +1,5 @@
 package baseball;
 
-import camp.nextstep.edu.missionutils.Console;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -13,6 +11,7 @@ import static camp.nextstep.edu.missionutils.Console.readLine;
 public class NumberScanner {
     private static final int NUMBER_SIZE = 3;
 
+    //TODO: 경고처리 (console을 close해야하는 것 같음)
     public static List<Integer> inputNumber() {
         System.out.print("숫자를 입력해주세요 : ");
         String numberString = readLine();

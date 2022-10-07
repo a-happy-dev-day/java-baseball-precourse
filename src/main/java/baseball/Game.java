@@ -2,8 +2,6 @@ package baseball;
 
 import java.util.List;
 
-import static camp.nextstep.edu.missionutils.Console.readLine;
-
 public class Game {
     private Computer computer = new Computer();
     private User user = new User();
@@ -15,7 +13,6 @@ public class Game {
     protected void start() {
         computerNumbers = computer.getNumbers();
         while (true) {
-            System.out.println(computerNumbers);
             userNumbers = user.getNumbers();
 
             if (resultJudgement.compareNumber(computerNumbers, userNumbers)) {
