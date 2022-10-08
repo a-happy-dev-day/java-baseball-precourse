@@ -1,8 +1,9 @@
 package baseball;
 
-import java.util.List;
+import camp.nextstep.edu.missionutils.Console;
+
 import java.util.ArrayList;
-import  camp.nextstep.edu.missionutils.Console;
+import java.util.List;
 
 public class User {
 
@@ -12,7 +13,7 @@ public class User {
 
     public Numbers createNumbers() {
         List<Number> number = new ArrayList<>();
-        for(String s : Console.readLine().split("")) {
+        for (String s : Console.readLine().split("")) {
             number.add(new Number(s));
         }
         return new Numbers(number);
