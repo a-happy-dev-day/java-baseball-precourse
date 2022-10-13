@@ -3,28 +3,26 @@ package baseball;
 import camp.nextstep.edu.missionutils.Randoms;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 
 public class RandomNumberGenerator {
-    HashSet<String> hash = new HashSet<>();
-    static final int MAX_NUMBER = 9;
-    static final int MIN_NUMBER = 1;
-    static final int NUMBER_SIZE = 3;
+
+    private static final int MAX_NUMBER = 9;
+    private static final int MIN_NUMBER = 1;
+    private static final int NUMBER_SIZE = 3;
 
     public Numbers createRandomNumbers() {
-        ArrayList<Number> number = new ArrayList<>();
+        List<Integer> number_list = new ArrayList<>();
+        List<Number> number_object = new ArrayList<>();
+        while (number_list.size() < NUMBER_SIZE) {
+            int num = Randoms.pickNumberInRange(MIN_NUMBER, MAX_NUMBER);
+            if (!number_list.contains(num)) {
+                number_list.add(num);
+                number_object.add(new Number(num));
+            }
+        }
 
-        while (hash.size() != NUMBER_SIZE) {
-            hash.add(String.valueOf(Randoms.pickNumberInRange(MIN_NUMBER, MAX_NUMBER)));
-        }
-        List<String> list = new ArrayList<>(hash);
-        for (String l : list) {
-            number.add(new Number(l));
-        }
-        hash.clear();
-        list.clear();
-        return new Numbers(number);
+        return new Numbers(number_object);
     }
 }

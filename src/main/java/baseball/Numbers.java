@@ -3,10 +3,9 @@ package baseball;
 import java.util.HashSet;
 import java.util.List;
 
-import static baseball.RandomNumberGenerator.NUMBER_SIZE;
-
 public class Numbers {
     private List<Number> numbers;
+    private static final int NUMBER_SIZE = 3;
 
     public Numbers(List<Number> numbers) {
         HashSet<String> duplicationCheck = new HashSet<>();

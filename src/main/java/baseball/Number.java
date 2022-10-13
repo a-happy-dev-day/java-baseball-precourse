@@ -14,6 +14,10 @@ public class Number {
         this.number = number;
     }
 
+    public Number(int number) {
+        this(String.valueOf(number));
+    }
+
     public String getNumber() {
         return number;
     }

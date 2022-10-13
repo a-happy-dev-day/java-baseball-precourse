@@ -29,7 +29,7 @@ class CompareSystemTest {
 
         //when
         Numbers nums1 = new Numbers(Arrays.asList(new Number("1"), new Number("2"), new Number("3")));
-        Numbers nums2 = new Numbers(Arrays.asList(new Number("1"), new Number("2"), new Number("4")));
+        Numbers nums2 = new Numbers(Arrays.asList(new Number("3"), new Number("1"), new Number("2")));
 
         //then
         Assertions.assertThat(compareSystem.compareNumbers(nums1, nums2)).isFalse();

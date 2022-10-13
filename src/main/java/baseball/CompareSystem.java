@@ -1,8 +1,7 @@
 package baseball;
 
-import static baseball.RandomNumberGenerator.NUMBER_SIZE;
-
 public class CompareSystem {
+    private static final int NUMBER_SIZE = 3;
 
     public boolean compareNumbers(Numbers user_numbers, Numbers random_numbers) {
         int strike = 0;
