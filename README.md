@@ -125,6 +125,12 @@
 
 ---
 
+요구사항 리스트
+- 숫자를 고른다.
+- 랜덤한 숫자를 만든다.
+- 숫자들을 비교한다.
+
+
 ## 📝 License
 
 This project is [MIT](https://github.com/woowacourse/java-baseball-precourse/blob/master/LICENSE) licensed.
