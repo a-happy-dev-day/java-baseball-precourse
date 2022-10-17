@@ -11,11 +11,11 @@ public class User {
         return Console.readLine();
     }
 
-    public Numbers createNumbers() {
-        List<Number> number = new ArrayList<>();
+    public BallNumbers createNumbers() {
+        List<BallNumber> number = new ArrayList<>();
         for (String s : Console.readLine().split("")) {
-            number.add(new Number(s));
+            number.add(new BallNumber(s));
         }
-        return new Numbers(number);
+        return new BallNumbers(number);
     }
 }
