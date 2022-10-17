@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-class NumberTest {
+class BallNumberTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
@@ -15,10 +15,10 @@ class NumberTest {
         //given
 
         //when
-        Number number = new Number(str);
+        BallNumber ballNumber = new BallNumber(str);
 
         //then
-        Assertions.assertThat(number.getNumber()).isEqualTo(str);
+        Assertions.assertThat(ballNumber.getNumber()).isEqualTo(str);
     }
 
 
@@ -32,7 +32,7 @@ class NumberTest {
 
         //then
         Assertions.assertThatThrownBy(() -> {
-            new Number(str);
+            new BallNumber(str);
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
@@ -46,7 +46,7 @@ class NumberTest {
 
         //then
         Assertions.assertThatThrownBy(() -> {
-            new Number(str);
+            new BallNumber(str);
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
@@ -59,7 +59,7 @@ class NumberTest {
 
         //then
         Assertions.assertThatThrownBy(() -> {
-            new Number(str);
+            new BallNumber(str);
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
@@ -73,7 +73,7 @@ class NumberTest {
 
         //then
         Assertions.assertThatThrownBy(() -> {
-            new Number(str);
+            new BallNumber(str);
         }).isInstanceOf(IllegalArgumentException.class);
     }
 }

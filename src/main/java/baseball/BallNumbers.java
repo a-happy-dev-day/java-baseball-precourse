@@ -3,17 +3,17 @@ package baseball;
 import java.util.HashSet;
 import java.util.List;
 
-public class Numbers {
-    private List<Number> numbers;
+public class BallNumbers {
+    private List<BallNumber> numbers;
     private static final int NUMBER_SIZE = 3;
 
-    public Numbers(List<Number> numbers) {
+    public BallNumbers(List<BallNumber> numbers) {
         HashSet<String> duplicationCheck = new HashSet<>();
 
         if (numbers.size() != NUMBER_SIZE) {
             throw new IllegalArgumentException();
         }
-        for (Number n : numbers) {
+        for (BallNumber n : numbers) {
             duplicationCheck.add(n.getNumber());
         }
         if (duplicationCheck.size() != numbers.size()) {
@@ -22,7 +22,7 @@ public class Numbers {
         this.numbers = numbers;
     }
 
-    public List<Number> getNumbers() {
+    public List<BallNumber> getNumbers() {
         return numbers;
     }
 

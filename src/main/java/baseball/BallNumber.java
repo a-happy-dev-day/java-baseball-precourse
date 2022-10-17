@@ -1,9 +1,9 @@
 package baseball;
 
-public class Number {
+public class BallNumber {
     private String number;
 
-    public Number(String number) {
+    public BallNumber(String number) {
         if (!number.chars().allMatch(Character::isDigit)) {
             throw new IllegalArgumentException();
         }
@@ -14,7 +14,7 @@ public class Number {
         this.number = number;
     }
 
-    public Number(int number) {
+    public BallNumber(int number) {
         this(String.valueOf(number));
     }
 
